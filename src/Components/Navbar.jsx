@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import {
   AppBar,
   Toolbar,
@@ -162,7 +163,7 @@ const Navbar = () => {
                     fontWeight: 600,
                   }}
                 >
-                  Login
+                  <Link to='/login'>Login</Link>
                 </Button>
               </Box>
             )}
