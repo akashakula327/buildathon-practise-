@@ -16,6 +16,16 @@ const Login = () => {
     console.log("Login data:", loginData);
   };
 
+  function Login() {
+  fetch('http://localhost:3000/user/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(loginData)
+  })
+}
+
   return (
     <Grid
       container
@@ -87,6 +97,7 @@ const Login = () => {
               <a
                 href="/register"
                 style={{ color: "#1976d2", textDecoration: "none" }}
+                onClick={Login}
               >
                 Register here
               </a>

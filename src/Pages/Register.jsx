@@ -25,6 +25,15 @@ const Register = () => {
     e.preventDefault();
     console.log("Registration data:", registerData);
   };
+function Register() {
+  fetch('http://localhost:3000/user/register', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(registerData)
+  })
+}
 
   return (
     <Grid
@@ -132,6 +141,7 @@ const Register = () => {
               color="primary"
               type="submit"
               sx={{ mt: 2, py: 1 }}
+              onClick={Register}
             >
               Register
             </Button>

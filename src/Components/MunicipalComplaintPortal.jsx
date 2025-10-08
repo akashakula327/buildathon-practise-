@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Typography, Box, Container } from '@mui/material';
 import { styled } from '@mui/system';
+import {Routes,Route,Link} from 'react-router-dom';
 
 const BlueBackground = styled(Box)({
   background: 'linear-gradient(to right, #004AAD, #002D8B)', // A gradient to match the image
@@ -54,12 +55,16 @@ function MunicipalComplaintPortal() {
           </Typography>
         </Box>
         <Box>
+          <Link to='/complaint'>
           <PrimaryButton variant="contained">
             Submit Complaint
           </PrimaryButton>
+          </Link>
+          <Link to='/track-complaint'>
           <SecondaryButton variant="outlined">
             Track Complaint
           </SecondaryButton>
+          </Link>
         </Box>
       </Container>
     </BlueBackground>
