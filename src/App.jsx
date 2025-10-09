@@ -9,6 +9,7 @@ import ComplaintForm from './Pages/ComplaintSubmission'
 import ComplaintStatus from './Pages/TrackComplaint'
 import Login from './Pages/Login'
 import Register from './Pages/Register'
+import UserComplaintsTracker from './Pages/Status'
 
 import { Routes,Route } from 'react-router-dom'
 
@@ -21,7 +22,7 @@ function App() {
       <Routes>
       <Route path='/' element={<MunicipalComplaintPortal/>}/>
       <Route path='/complaint' element={<ComplaintForm/>}/>
-      <Route path='/track-complaint' element={<ComplaintStatus/>}/>
+      <Route path='/track-complaint' element={<UserComplaintsTracker/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
     </Routes>
